@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <script src="./js/trangchu.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .nextbt,.backbt{
+            top: 50%;
+            position: absolute;
+        }
+        .nextbt{
+            right: 0;
+            width: 10%;
+        }
+        .backbt{
+            left: 0;
+            width: 10%;
+        }
+        .header{
+            position: relative;
+        }
+        .slideshow{
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body onload="loadAnh();">
+    <div class="giohang">
+        <a href="./giohang.html" onclick="showcart();"><img src="cart.png"><span id="countsp">0</span></a>
+    </div>
+    <!-- <div id="showcart">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền ($)</th>
+            </tr>
+            <tbody id="mycart">
+
+            </tbody>
+
+        </table>
+    </div> -->
+    <div class="boxcenter">
+        <div class="row mb header">
+            <h1> SIÊU THỊ TRỰC TUYẾN</h1>
+        </div>
+
+        <div class="row mb menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="giohang.html">Giỏ hàng</a></li>
+                <li><a href="dangki.html">Đăng ký</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+            </ul>
+        </div>
+        <div class="row mb ">
+            <div class="row">
+                    <div class="header">
+                        <h3 style="margin-left: 100px;">ÁO THUN ĐẸP</h3>
+                        <img id="slideshow" class = "slideshow "src="images/HINH1.jpg">
+                        <img class="backbt" src="images/HINH8.webp" onclick="back()" onchange="back()">
+                        <img class="nextbt"src="images/HINH7.png" onclick="next()" onchange="next()">
+                        <div class="ds">
+                            <span id="soanh"></span>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/aobosua.png" alt=""></div>
+                    <p>$<span>50000</span></p>
+                    <a href="#">Áo bò sữa</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button type="button" onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/aochu.png" alt=""></div>
+                    <p>$<span>70000</span></p>
+                    <a href="#">Áo hình Nhật</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/aodoremon.png" alt=""></div>
+                    <p>$<span>150000</span></p>
+                    <a href="#">Áo hình Doraemon</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/aomin.png" alt=""></div>
+                    <p>$<span>80000</span></p>
+                    <a href="#">Áo chữ</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/HINH3.jpg" alt=""></div>
+                    <p>$<span>100000</span></p>
+                    <a href="#">Áo nhóm 1</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/HINH2.jpg" alt=""></div>
+                    <p>$<span>150000</span></p>
+                    <a href="#">Áo nhóm 2</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/HINH1.jpg" alt=""></div>
+                    <p>$<span>150000</span></p>
+                    <a href="#">Áo nhóm 3</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/aothun.png" alt=""></div>
+                    <p>$<span>200000</span></p>
+                    <a href="#">Áo THESTART</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/aothun2.png" alt=""></div>
+                    <p>$<span>200000</span></p>
+                    <a href="#">Áo NEWYORK</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script>
+        setInterval(loadAnh,1000);
+    </script>
+</body>
+
+</html>

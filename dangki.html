@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="dangki.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div class="boxcenter">
+        <div class="row mb header">
+            <h1> SIÊU THỊ TRỰC TUYẾN</h1>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="giohang.html">Giỏ hàng</a></li>
+                <li><a href="dangki.html">Đăng ký</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <div class="khung">
+                <div class="tittle">
+                    <h1>Đăng ký thành viên</h1>
+                </div>
+
+                <div id="noidung">
+                    <form id="form">
+                        <div class="form-group">
+                            <legend>Mã sinh viên</legend>
+                            <input type="text" class="dk" id="msv">
+                            <span></span>
+                        </div>
+
+                        <div class="form-group">
+                            <legend>Họ và Tên</legend>
+                            <input type="text" class="dk" id="name">
+                            <span></span>
+                        </div>
+
+                        <div class="form-group">
+                            <legend>Email</legend>
+                            <input type="email" class="dk" id="email">
+                            <span></span>
+                        </div>
+
+                        <div class="form-group">
+                            <legend>Giới tính</legend>
+                            <div id="frames">
+                                <div class="nho">
+                                    <input type="radio" name="gender"> Nam
+                                    <input type="radio" name="gender"> Nữ
+                                </div>
+                            </div>
+                            <p class="gender p"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <legend>Sở thích</legend>
+                            <div id="frames2">
+                                <div class="nho">
+                                    <input type="checkbox" name="checkbox">
+                                    <label>Đọc sách</label>
+                                    <input type="checkbox" name="checkbox">
+                                    <label>Du lịch</label>
+                                    <input type="checkbox" name="checkbox">
+                                    <label>Âm nhạc</label>
+                                    <input type="checkbox" name="checkbox">
+                                    <label>Ẩm thực</label>
+                                    <input type="checkbox" name="checkbox">
+                                    <label>Khác</label>
+                                </div>
+                            </div>
+                            <p class="hobby p"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <legend>Quốc tịch</legend>
+                            <select name="select" class="select" id="nationality">
+                                <option value="0">Chọn Quốc Tịch</option>
+                                <option value="1">Việt Nam</option>
+                                <option value="2">China</option>
+                                <option value="3">Japan</option>
+                                <option value="4">Korea</option>
+                            </select>
+                            <p class="nationality p"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <legend>Ghi chú</legend>
+                            <textarea type="textarea" class="note" id="note"></textarea><br>
+                            <span></span>
+                        </div>
+                        <div class="but">
+                            <br><button class="button">Đăng ký</button>
+                            <button type="submit" class="button">Nhập lại</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p>PS21809 - Lê Thị Thu Huuệ </p>
+        </div>
+
+
+    </div>
+
+    <script src="dangki.js"></script>
+</body>
+
+</html>
